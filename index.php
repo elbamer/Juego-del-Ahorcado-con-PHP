@@ -19,7 +19,7 @@
                     $solucion[$i]=$letra;
             }
         }
-        /*$escondida = "fanta";
+        $escondida = "fanta";
         $solucion="";
         if ($_POST){
             $intentos=$_POST["intentos"];
@@ -32,7 +32,25 @@
         else {
            $intentos=0;
            inicializarPalabra(strlen($escondida), $solucion);
-        }  */
+        }
+
+
+        //CONTAODR DE PALABRAS
+  $vocalesEncontradas=0;
+        function Contador($letra, $escondida)
+        {
+            for($i=0; $i<strlen($escondida); $i++)
+            {
+                if($letra==$escondida[$i])
+                    $vocalesEncontradas++;
+                    $i++;
+                      }
+               $letra++;
+        }
+        echo "LAS LETRAS SON ".$vocalesEncontradas;
+
+
+
      ?>
     <body>
         <form action = "index.php" method = "post">
